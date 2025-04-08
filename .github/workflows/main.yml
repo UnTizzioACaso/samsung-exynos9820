@@ -54,6 +54,7 @@ jobs:
         run: |
           set -e -o pipefail
           ./cruelbuild config                    \
+                       os_patch_level=2020-12    \
                        model=${{ matrix.model }} \
                        name="Cruel-devel"        \
                        toolchain=$TOOLCHAIN      \
@@ -62,6 +63,7 @@ jobs:
                        +ttl                      \
                        +wireguard                \
                        +cifs                     \
+                       +fp_boost                 \
                        +sdfat                    \
                        +ntfs                     \
                        +force_dex_wqhd           \
